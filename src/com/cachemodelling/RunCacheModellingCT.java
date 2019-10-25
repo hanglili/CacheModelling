@@ -82,7 +82,7 @@ public class RunCacheModellingCT {
     }
 
     // Usage: java ...
-    //   RunCacheModellingCT <numObservations> <warmup> <populationSize>
+    //   RunCacheModellingCT <numObservations> <warmup> <populationSize> <cacheSize>
     public static void main(String[] args) {
         var numObservations = Integer.parseInt(args[0]);
         var warmUp = Integer.parseInt(args[1]);
@@ -90,7 +90,7 @@ public class RunCacheModellingCT {
         var cacheSize = Integer.parseInt(args[3]);
         var sim = new RunCacheModellingCT(numObservations, warmUp, populationSize, cacheSize);
 
-        // sim.runOnce();
+//        sim.runOnce();
         sim.runNtimes();
         sim.displayResults(System.out);
     }
